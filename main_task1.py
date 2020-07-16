@@ -12,7 +12,7 @@ if __name__ == "__main__":
         exit(-1)
         
     sc = SparkContext(appName="Top10Taxi")
-    lines = sc.textFile(sys.argv[1], 1)
+    lines = sc.textFile(sys.argv[1])
     taxilines = lines.map(lambda line: line.split(","))
     
     #clean up 

@@ -10,8 +10,8 @@ if __name__ == "__main__":
         print("Usage: wordcount <file> <output> ", file=sys.stderr)
         exit(-1)
         
-    sc = SparkContext(appName="PythonWordCount")
-    lines = sc.textFile(sys.argv[1], 1)
+    sc = SparkContext(appName="10drivers")
+    lines = sc.textFile(sys.argv[1])
     taxilines = lines.map(lambda line: line.split(","))
     
     #clean up 

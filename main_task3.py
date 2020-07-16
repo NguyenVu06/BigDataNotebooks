@@ -10,7 +10,7 @@ if __name__ == "__main__":
         print("Usage: wordcount <file> <output> ", file=sys.stderr)
         exit(-1)
 
-    sc = SparkContext(appName="Top10Taxi")
+    sc = SparkContext(appName="bestTime")
     lines = sc.textFile(sys.argv[1], 1)
     taxilines = lines.map(lambda line: line.split(","))
     

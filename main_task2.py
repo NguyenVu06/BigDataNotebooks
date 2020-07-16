@@ -51,6 +51,5 @@ if __name__ == "__main__":
     top10drivers = sc.parallelize(avg_rateRDD.top(10, lambda x: x[1]))
     top10drivers.coalesce(1).saveAsTextFile(sys.argv[2])
     
-    output = top10drivers.collect()
-    
+
     sc.stop()

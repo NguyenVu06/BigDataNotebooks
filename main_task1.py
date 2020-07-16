@@ -49,6 +49,4 @@ if __name__ == "__main__":
     top10taxi.coalesce(1).saveAsTextFile(sys.argv[2])
 
     
-    output = top10taxi.collect()
-    
     sc.stop()

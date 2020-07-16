@@ -49,6 +49,5 @@ if __name__ == "__main__":
 
     bestWrkHr.coalesce(1).saveAsTextFile(sys.argv[2])
     
-    output = bestWrkHr.collect()
     
     sc.stop()
